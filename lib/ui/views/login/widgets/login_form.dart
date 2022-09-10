@@ -1,4 +1,5 @@
 import 'package:app_starbucks/core/theme/app_colors.dart';
+import 'package:app_starbucks/ui/views/home/home_view.dart';
 import 'package:flutter/material.dart';
 
 class LoginForm extends StatelessWidget {
@@ -67,6 +68,12 @@ class LoginForm extends StatelessWidget {
           GestureDetector(
             onTap: () {
               print("Click Login [email: $email - password: $password]");
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (BuildContext context) => const HomeView(),
+                ),
+              );
             },
             child: Container(
               width: double.infinity,

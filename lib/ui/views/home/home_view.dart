@@ -16,6 +16,26 @@ class HomeView extends StatelessWidget {
           CenterCard(),
         ],
       ),
+      bottomNavigationBar: BottomNavigationBar(
+        backgroundColor: Colors.white,
+        items: const [
+          BottomNavigationBarItem(
+            icon: Icon(Icons.home),
+            label: 'Home',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.computer),
+            label: 'Offers',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Account',
+          ),
+        ],
+        currentIndex: 0,
+        selectedItemColor: const Color.fromRGBO(64, 168, 109, 1.0),
+        onTap: null,
+      ),
     );
   }
 }

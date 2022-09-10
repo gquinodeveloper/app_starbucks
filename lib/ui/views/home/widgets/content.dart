@@ -11,12 +11,8 @@ class Content extends StatelessWidget {
       alignment: Alignment.bottomCenter,
       child: Container(
         width: double.infinity,
-        height: MediaQuery.of(context).size.height * 0.75,
-        padding: const EdgeInsets.only(
-          top: 70.0,
-          left: 20.0,
-          right: 20.0,
-        ),
+        height: MediaQuery.of(context).size.height * 0.65,
+        padding: const EdgeInsets.only(top: 70.0),
         decoration: const BoxDecoration(
           color: Color.fromRGBO(249, 251, 253, 1.0),
           borderRadius: BorderRadius.only(
@@ -25,20 +21,82 @@ class Content extends StatelessWidget {
         ),
         child: Column(
           children: [
-            Card(
-              color: Colors.white,
-              shadowColor: Colors.black12,
-              elevation: 6.0,
-              shape: RoundedRectangleBorder(
-                borderRadius: BorderRadius.circular(18.0),
-              ),
-              child: const SizedBox(
-                width: double.infinity,
-                height: 150.0,
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 20.0),
+              child: Card(
+                color: Colors.white,
+                shadowColor: Colors.black12,
+                elevation: 6.0,
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(15.0),
+                ),
+                child: Container(
+                  width: double.infinity,
+                  height: 170.0,
+                  padding: const EdgeInsets.only(
+                    left: 20.0,
+                    top: 20.0,
+                  ),
+                  child: Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          const Text(
+                            "Milan Collier",
+                            style: TextStyle(
+                              fontSize: 18.0,
+                              fontWeight: FontWeight.bold,
+                              color: Colors.black,
+                            ),
+                          ),
+                          const SizedBox(height: 10.0),
+                          const Text(
+                            "2 star until green level",
+                            style: TextStyle(
+                              fontSize: 14.0,
+                              color: Colors.black26,
+                            ),
+                          ),
+                          const SizedBox(height: 10.0),
+                          Row(
+                            children: const [
+                              Icon(Icons.star, color: Colors.amber),
+                              Icon(Icons.star, color: Colors.amber),
+                              Icon(Icons.star, color: Colors.amber),
+                              Icon(Icons.star, color: Colors.black26),
+                              Icon(Icons.star, color: Colors.black26),
+                            ],
+                          ),
+                          const SizedBox(height: 10.0),
+                          Container(
+                            height: 40.0,
+                            width: 110.0,
+                            alignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              color: const Color.fromRGBO(64, 168, 109, 1.0),
+                              borderRadius: BorderRadius.circular(30.0),
+                            ),
+                            child: const Text(
+                              "UPGRADE",
+                              style: TextStyle(
+                                fontSize: 14.0,
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                      Image.asset("assets/images/banner.png"),
+                    ],
+                  ),
+                ),
               ),
             ),
             Container(
-              margin: const EdgeInsets.symmetric(vertical: 20.0),
+              margin: const EdgeInsets.all(20.0),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: const [
@@ -63,7 +121,7 @@ class Content extends StatelessWidget {
             ),
             Container(
               width: double.infinity,
-              height: 180.0,
+              height: 200.0,
               color: Colors.transparent,
               child: const ListCoffee(),
             ),
